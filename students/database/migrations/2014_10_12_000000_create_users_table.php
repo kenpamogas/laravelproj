@@ -15,11 +15,12 @@ return new class extends Migration
             $table->id();
             $table->string('first_name');
             $table->string('last_name');
+            $table->string('name');
             $table->string('middle_name')->nullable();
-            $table->string('birth_date');
+            $table->date('birth_date');
             $table->string('course');
-            $table->string('year');
-            $table->string('section, 1');
+            $table->integer('year');
+            $table->char('section', 1);
             $table->string('email')->unique();
             $table->timestamps();
         });
